@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Grid Example</title>
+		<style>
+			.container {
+			padding: 48px;}
+
+			.grid {
+			display: grid;
+			grid-template-columns: repeat(5, 1fr);
+			grid-template-rows: repeat(7, 1fr);
+			grid-gap: 0px;}
+
+			.cell {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			background-color: white;
+			color: black;
+			font-size: 20px;
+			font-family: Arial, sans-serif;
+			border: 1px solid black;
+			cursor: pointer;
+			height: 96px;}
+			
+			.non-clickable-cell {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			background-color: #132257;
+			color: white;
+			font-size: 20px;
+			font-family: Arial, sans-serif;
+			border: 1px solid black;
+			cursor: default;
+			height: 96px;}
+
+			.cell.green {
+			background-color: green;
+			color: white;}
+
+			.cell.red {
+			background-color: red;
+			color: white;}
+		</style>
+	</head>
+	<body>
+		<div class="container">
+			<div class="grid">
+			<div class="cell" id="cell-1">1 Hugo</div>
+			<div class="cell" id="cell-2">20 Forster</div>
+			<div class="cell" id="cell-3">40 Austin</div>
+			<div class="cell" id="cell-4">41 Whiteman</div>
+			<div class="cell" id="cell-5">4 Skipp</div>
+			<div class="cell" id="cell-6">5 Højbjerg</div>
+			<div class="cell" id="cell-7">6 Sánchez</div>
+			<div class="cell" id="cell-8">7 Son HM</div>
+			<div class="cell" id="cell-9">9 Richarlison</div>
+			<div class="cell" id="cell-10">10 Kane</div>
+			<div class="cell" id="cell-11">12 Emerson</div>
+			<div class="cell" id="cell-12">14 Perišić</div>
+			<div class="cell" id="cell-13">15 Dier</div>
+			<div class="cell" id="cell-14">16 Danjuma</div>
+			<div class="cell" id="cell-15">17 Romero</div>
+			<div class="cell" id="cell-16">19 Sessegnon</div>
+			<div class="cell" id="cell-17">21 Kulusevski</div>
+			<div class="non-clickable-cell" id="cell-18">Spurs</div>
+			<div class="cell" id="cell-19">23 Porro</div>
+			<div class="cell" id="cell-20">25 Tanganga</div>
+			<div class="cell" id="cell-21">27 Lucas</div>
+			<div class="cell" id="cell-22">29 Sarr</div>
+			<div class="cell" id="cell-23">30 Bentancur</div>
+			<div class="cell" id="cell-24">33 Davies</div>
+			<div class="cell" id="cell-25">34 Lenglet</div>
+			<div class="cell" id="cell-26">38 Bissouma</div>
+			<div class="cell" id="cell-27">3 Reguilón</div>
+			<div class="cell" id="cell-28">8 Winks</div>
+			<div class="cell" id="cell-29">11 Gil</div>
+			<div class="cell" id="cell-30">18 Lo Celso</div>
+			<div class="cell" id="cell-31">22 Rodon</div>
+			<div class="cell" id="cell-32">24 Spence</div>
+			<div class="cell" id="cell-33">28 Ndombele</div>
+			<div class="cell" id="cell-34">42 White</div>
+			<div class="cell" id="cell-35">Udogie</div>
+			</div>
+		</div>
+
+		<script>
+			const cells = document.querySelectorAll('.cell');
+				cells.forEach(cell => {
+				cell.addEventListener('click', () => {
+			if (cell.classList.contains('green')) {
+				cell.classList.remove('green');
+				cell.classList.add('red');}
+			else if (cell.classList.contains('red')) {
+				cell.classList.remove('red');}
+			else {
+				cell.classList.add('green');
+			}
+				});
+				});
+		</script>
+	</body>
+</html>
