@@ -85,21 +85,23 @@
 			<div class="cell" id="cell-35">Udogie</div>
 			</div>
 		</div>
-
 		<script>
 			const cells = document.querySelectorAll('.cell');
-				cells.forEach(cell => {
+			cells.forEach(cell => {
 				cell.addEventListener('click', () => {
 			if (cell.classList.contains('green')) {
 				cell.classList.remove('green');
-				cell.classList.add('red');}
-			else if (cell.classList.contains('red')) {
-				cell.classList.remove('red');}
-			else {
+				cell.classList.add('red');
+			} else if (cell.classList.contains('red')) {
+				cell.classList.remove('red');
+				cell.classList.add('yellow');
+			} else if (cell.classList.contains('yellow')) {
+				cell.classList.remove('yellow');
+			} else {
 				cell.classList.add('green');
 			}
-				});
-				});
+		});
+	});
 		</script>
 	</body>
 </html>
